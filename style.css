@@ -1,0 +1,110 @@
+
+:root {
+  --color-goldenrod: goldenrod;
+  --color-darkgrey: #333333;
+}
+
+
+*, *::before, *::after {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  font-size: 14px;
+}
+
+/* STYLING */
+.styled-font {
+  font-family: "Metamorphous", serif;
+}
+
+.medieval-font {
+  font-family: "MedievalSharp", cursive;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* STRUCTURE */
+header {
+  color: whitesmoke;
+  padding: 1em;
+  background-color: black;
+  margin-bottom: 1em;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.container {
+  background-color: #FAF3E0;
+  color: var(--color-darkgrey);
+  text-shadow: 0 0 1px goldenrod;
+
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 1em;
+}
+
+.container h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1em;
+  font-weight: bolder;
+  text-shadow: 0 0 1px black;
+
+}
+
+.btn {
+  text-align: center;
+}
+
+.container .btn #create-btn {
+  padding: 10px 15px;
+  border: 2px solid var(--color-goldenrod);
+  background-color: crimson;
+  color: white;
+  margin-top: 0.5em;
+}
+
+
+
+
+
+
+.character-image {
+  width: 100%;
+  border: 1px solid grey;
+  margin: 0 auto;
+
+}
+
+.character-image img {
+  width: 100%;
+  height: auto;
+}
+
+.character-sheet {
+  display: flex;
+  margin-top: 1em;
+  gap: 1em;
+}
+
+.character-details {
+  width: 100%;
+}
+
+.character-details p {
+  font-size: 1.25rem;
+  line-height: 2;
+  text-shadow: 0 0 1px goldenrod;
+
+}

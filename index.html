@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Metamorphous&display=swap" rel="stylesheet">
+  <title>Character Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- don't forget to add fav icon!!!!! -->
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="./images/catventures-cropped.PNG" alt="">
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="medieval-font">Become the cat-venturer <br>you were meant to be!</h1>
+    <p class="styled-font">Click the button below to summon a brand new adventurer! Each roll reveals a random combination of ancestry, class, and background.</p>
+    <div class="btn">
+      <button class="bold" id="create-btn" type="submit">Create Character</button>
+    </div>
+
+
+    <div class="character-sheet">
+      <div class="character-image" id="character-image">
+        <!-- <img src="./images/cat-ranger.jpg" alt=""> -->
+      </div>
+
+      <div class="character-details">
+        <p><span class="bold">Ancestry:</span> <span class="styled-font" id="char-ancestry">-</span></p>
+        <p><span class="bold">Class:</span> <span class="styled-font" id="char-class">-</span></p>
+        <p><span class="bold">Background:</span> <span class="styled-font" id="char-background">-</span></p>
+      </div>
+    </div>
+  </main>
+
+<script type="module" src="./index.js"></script>
+</body>
+</html>
