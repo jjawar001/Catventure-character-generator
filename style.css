@@ -25,6 +25,8 @@ body {
   background-attachment: scroll;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
+  height: 100dvh;
 }
 
 /* STYLING */
@@ -67,7 +69,7 @@ header {
 }
 
 .logo img {
-  height: 30px;
+  height: 50px;
   width: auto;
 }
 
