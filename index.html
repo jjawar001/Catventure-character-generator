@@ -13,15 +13,17 @@
 <body>
   <header>
     <div class="logo">
-      <img src="./images/catventures-cropped.PNG" alt="">
+      <img src="./images/catventures-cropped.PNG" alt="Catventures's logo">
     </div>
   </header>
 
   <main class="container">
     <h1 class="medieval-font">Become the cat-venturer <br>you were meant to be!</h1>
     <p class="styled-font">Click the button below to summon a brand new adventurer! Each roll reveals a random combination of ancestry, class, and background.</p>
-    <div class="btn">
-      <button class="bold" id="create-btn" type="submit">Create Character</button>
+    <div class="btn-area">
+      <button class="bold" id="create-btn" type="submit" aria-label="Generate a random cat-based D&D character">
+        Create Character
+      </button>
     </div>
 
 
@@ -30,10 +32,13 @@
         <!-- <img src="./images/cat-ranger.jpg" alt=""> -->
       </div>
 
-      <div class="character-details">
-        <p><span class="bold">Ancestry:</span> <span class="styled-font" id="char-ancestry">-</span></p>
-        <p><span class="bold">Class:</span> <span class="styled-font" id="char-class">-</span></p>
-        <p><span class="bold">Background:</span> <span class="styled-font" id="char-background">-</span></p>
+      <div class="character-details" aria-live="polite">
+        <p><span class="bold">Ancestry:</span></p>
+        <p> <span class="styled-font indent" id="char-ancestry">-</span></p>
+        <p><span class="bold">Class: </span></p>
+        <p><span class="styled-font indent" id="char-class">-</span></p>
+        <p><span class="bold">Background:</span></p>
+        <p><span class="styled-font indent" id="char-background">-</span></p>
       </div>
     </div>
   </main>
