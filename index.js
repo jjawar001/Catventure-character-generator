@@ -29,10 +29,16 @@ function randomNumber(param1){
 }
 
 hamburgerBtn.addEventListener('click', ()=>{
-  if(navLinks.style.display === 'none') {
-    navLinks.style.display = 'block'
-  } else {
-    navLinks.style.display = 'none'
-  }
+  const isHidden = getComputedStyle(navLinks).display === 'none' 
+  navLinks.style.display = isHidden ? 'block' : 'none'
+
+
+
+  button.setAttribute('aria-expanded', isOpen);
+  button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+
+
+
+
 })
 
