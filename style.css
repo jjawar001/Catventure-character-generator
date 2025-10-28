@@ -14,10 +14,17 @@
   margin: 0;
   border: 0;
   box-sizing: border-box;
+  font-family: serif;
+}
+
+img {
+  width: 100%;
 }
 
 html {
   font-size: 16px;
+  height: 100vh;
+  height: 100dvh;
 }
 
 body {
@@ -25,8 +32,6 @@ body {
   background-attachment: scroll;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
-  height: 100dvh;
 }
 
 /* STYLING */
@@ -60,7 +65,19 @@ p {
   text-shadow: 0 0 1px goldenrod;
 }
 
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+button:hover {
+  cursor: pointer
+}
+
+
+
 /* STRUCTURE */
+
 /* TOP OF PAGE, HEADER */
 header {
   padding: 1em;
@@ -71,6 +88,36 @@ header {
 .logo img {
   height: 50px;
   width: auto;
+}
+
+/* NAV */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  padding: 1em;
+  flex-direction: column;
+}
+
+.hamburger {
+  background-color: black;
+  /* display: block; */
+  height: 50px;
+  cursor: pointer;
+
+}
+
+.hamburger:active, .hamburger:hover {
+  opacity: 0.5;
+  transition: opacity 0.2s ease
+}
+
+.navlinks ul {
+  color: white;
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  gap: 2em;
 }
 
 /* CONTAINER */
@@ -98,6 +145,11 @@ header {
   margin-top: 0.5em;
 }
 
+#create-btn:hover, #create-btn:focus {
+  opacity: 0.5;
+}
+
+
 .character-image {
   width: 100%;
   margin: 0 auto;
@@ -123,6 +175,15 @@ header {
   width: 100%;
 }
 
+
+
+
+
+
+
+
+
+
 @media all and (min-width:600px) {
   .container {
     max-width: 600px;
@@ -141,5 +202,17 @@ header {
   .logo img {
     height: 50px;
     width: auto;
+    display: block;
+    border: 1px solid yellow;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction:column;
+    border: 1px solid yellow;
+  } 
+
+  .hamburger {
+    display: none;
   }
 }

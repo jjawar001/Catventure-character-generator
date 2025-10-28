@@ -5,6 +5,8 @@ const charAncestry = document.getElementById('char-ancestry')
 const charClass = document.getElementById('char-class')
 const charBackground = document.getElementById('char-background')
 const charImage = document.getElementById('character-image')
+const hamburgerBtn = document.getElementById('hamburger-btn')
+const navLinks = document.getElementById('nav-links')
 
 createBtn.addEventListener('click', generateCharacter)
 
@@ -25,4 +27,12 @@ function generateCharacter() {
 function randomNumber(param1){
   return Math.floor(Math.random() * param1)
 }
+
+hamburgerBtn.addEventListener('click', ()=>{
+  if(navLinks.style.display === 'none') {
+    navLinks.style.display = 'block'
+  } else {
+    navLinks.style.display = 'none'
+  }
+})
 
