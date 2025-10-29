@@ -5,6 +5,7 @@ const charAncestry = document.getElementById('char-ancestry')
 const charClass = document.getElementById('char-class')
 const charBackground = document.getElementById('char-background')
 const charImage = document.getElementById('character-image')
+
 const hamburgerBtn = document.getElementById('hamburger-btn')
 const navLinks = document.getElementById('nav-links')
 
@@ -29,16 +30,14 @@ function randomNumber(param1){
 }
 
 hamburgerBtn.addEventListener('click', ()=>{
-  const isHidden = getComputedStyle(navLinks).display === 'none' 
-  navLinks.style.display = isHidden ? 'block' : 'none'
+  // const isHidden = getComputedStyle(navLinks).display === 'none' 
+  // navLinks.style.display = isHidden ? 'block' : 'none'
 
+  // button.setAttribute('aria-expanded', isOpen);
+  // button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
 
-
-  button.setAttribute('aria-expanded', isOpen);
-  button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-
-
-
-
+  const expanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
+  hamburgerBtn.setAttribute('aria-expanded', String(!expanded));
+  navLinks.classList.toggle('active');
 })
 
