@@ -10,32 +10,36 @@
   <link rel="stylesheet" href="style.css">
   <!-- don't forget to add fav icon!!!!! -->
 </head>
+
+
+
+
 <body>
   <header>
-    <div class="logo">
+    <div class="header-logo">
       <a href="/" aria-label="Go to homepage">
         <img src="./images/catventures-cropped.PNG" alt="Catventures logo">
       </a>
     </div>
-
-    <nav class="navbar">
-      <button 
-        id="hamburger-btn" 
-        class="hamburger-menu-toggle" 
-        aria-label="Toggle Menu"
-        aria-expanded="false"
-        aria-controls="nav-links">
-        <img src="./images/hamburger-menu.svg" alt="hamburger menu icon">
-      </button>
-
-      <ul id="nav-links" class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#" aria-current="page">Character Generator</a></li>
-        <li><a href="#">Spells</a></li>
-      </ul>
-    </nav>
+    <button 
+      id="hamburger-btn" 
+      class="hamburger-menu-toggle" 
+      aria-label="Toggle Menu"
+      aria-expanded="false"
+      aria-controls="nav-links">
+      <img src="./images/hamburger-menu.svg" alt="hamburger menu icon">
+    </button>
   </header>
+
+  <nav class="nav-list" id="nav-list">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#" aria-current="page">Character Generator</a></li>
+      <li><a href="#">Spells</a></li>
+    </ul>
+  </nav>
+
 
   <main class="container">
     <section aria-labelledby="intro-title">
@@ -67,13 +71,12 @@
 
   <footer>
     <section>STAY CONNECTED</section>
-    <section>
+    <section class="logo">
       <img src="./images/catventures-just-logo.PNG" alt="">
     </section>
-    <section></section>
-    <div class="footer-nav">
+    <div class="footer-nav outline">
       <p>Navigate</p>
-      <ul>
+      <ul class="indent">
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Character Generator</a></li>

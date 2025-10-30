@@ -7,7 +7,7 @@ const charBackground = document.getElementById('char-background')
 const charImage = document.getElementById('character-image')
 
 const hamburgerBtn = document.getElementById('hamburger-btn')
-const navLinks = document.getElementById('nav-links')
+const navList = document.getElementById('nav-list')
 
 createBtn.addEventListener('click', generateCharacter)
 
@@ -30,14 +30,15 @@ function randomNumber(param1){
 }
 
 hamburgerBtn.addEventListener('click', ()=>{
-  // const isHidden = getComputedStyle(navLinks).display === 'none' 
-  // navLinks.style.display = isHidden ? 'block' : 'none'
-
   // button.setAttribute('aria-expanded', isOpen);
   // button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-
-  const expanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
-  hamburgerBtn.setAttribute('aria-expanded', String(!expanded));
-  navLinks.classList.toggle('active');
+  // const expanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
+  // hamburgerBtn.setAttribute('aria-expanded', String(!expanded));
+  navList.classList.toggle('active');
+  if (navList.classList.contains('active')){
+    hamburgerBtn.innerHTML = `<img class="close-nav-list" src="./images/close-img.png" alt="hamburger menu icon">`
+  } else {
+    hamburgerBtn.innerHTML = `<img src="./images/hamburger-menu.svg" alt="hamburger menu icon">`
+  }
 })
 
