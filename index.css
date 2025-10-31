@@ -227,6 +227,38 @@ footer {
 .col {
   width: 100%;
 }
+.table {
+  height: 200px;
+  border: 1px solid red;
+  overflow-y: auto;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+th {
+  border: 1px solid red;
+}
+
+tr {
+  height: 2rem;
+}
+tr:hover {
+  opacity: 0.5;
+}
+
+tr:active {
+  opacity: 0.5;
+  color: red;
+}
+
+
+
+
+
+
+
+
+
 
 
 
