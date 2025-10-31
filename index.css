@@ -1,0 +1,271 @@
+
+:root {
+  --color-goldenrod: goldenrod;
+  --color-darkgrey: #333333;
+  --color-parchment: #FAF3E0;
+  --color-black: black;
+  --color-crimson: crimson;
+
+  --background-html-linear-gradient: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+}
+
+
+*, *::before, *::after {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+html, body {
+  height: auto;
+  min-height: 100vh;
+}
+
+body {
+  background: var(--background-html-linear-gradient);
+  background-repeat: no-repeat;
+}
+
+/* STYLING */
+
+/* [aria-current="page"] {
+  opacity: 0.5;
+  background: var(--background-html-linear-gradient);
+} */
+.styled-font {
+  font-family: "Metamorphous", serif;
+}
+.medieval-font {
+  font-family: "MedievalSharp", cursive;
+}
+.bold {
+  font-weight: bold;
+}
+.indent {
+  margin-left: 10px;
+}
+.bold {
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
+}
+
+/* typography */
+.container h1 {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 0.5em;
+  text-shadow: 0 0 0.5px white;
+}
+
+p {
+  font-size: 0.8rem;
+  line-height: 2;
+  text-shadow: 0 0 1px goldenrod;
+}
+
+
+
+
+/* STRUCTURE */
+
+/* TOP OF PAGE, HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: var(--color-black);
+  border-bottom: 1px solid whitesmoke;
+  position: relative;
+}
+
+.header-logo a img {
+  height: 3.5em;
+  display: block;
+}
+
+.hamburger-menu-toggle {
+  background-color: var(--color-black);
+  border: none;
+  cursor: pointer;
+  height: 3.5em;
+}
+.hamburger-menu-toggle img {
+  height: 3.5em;
+}
+
+.nav-list {
+  background-color: var(--color-black);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+
+.nav-list ul {
+  list-style: none;
+}
+.nav-list li {
+  padding: 1rem;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.nav-list.active {
+  max-height: 300px; /*adjust based on content*/
+}
+
+.close-nav-list {
+  display: block;
+  /* color: white; */
+background-color: black;
+height: 3.5rem;
+}
+
+
+
+
+
+/* CONTAINER */
+.container {
+  background-color: var(--color-parchment);
+  border: 1px solid var(--color-goldenrod);
+  color: var(--color-darkgrey);
+  text-shadow: 0 0 1px goldenrod;
+  width: 80%;
+  max-width: 500px;
+  margin: 2em auto;
+  border-radius: 10px;
+  padding: 0.8em;
+}
+
+.btn-area {
+  text-align: center;
+}
+
+#create-btn {
+  padding: 10px 15px;
+  border: 2px solid var(--color-goldenrod);
+  background-color: var(--color-crimson);
+  color: var(--color-goldenrod);
+  margin-top: 0.5em;
+}
+
+#create-btn:hover, #create-btn:focus {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+#create-btn:active {
+  opacity: 1;
+}
+
+.character-image {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.character-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--color-goldenrod);
+}
+
+.character-sheet {
+  display: flex;
+  margin-top: 1em;
+  gap: 0.5em;
+  border: 1px solid var(--color-goldenrod);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.character-details {
+  width: 100%;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  background-color: var(--color-black);
+  color: whitesmoke;
+  padding: 2em;
+  width: 100%;
+}
+
+.logo-footer img {
+  height: 50px;
+  width: auto;
+}
+
+.footer-nav ul {
+  list-style: none;
+}
+
+
+/* ADD THIS TO SPELLS.CSS */
+.two-col {
+  display: flex;
+  flex-direction: column;
+  /* for desktop change to row */
+}
+.col {
+  width: 100%;
+}
+
+
+
+
+/* Larger screen sizes */
+@media all and (min-width:600px) {
+  .container {
+    max-width: 600px;
+
+  }
+  .container h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  #create-btn {
+    font-size: 1.5rem;
+  }
+
+  header {
+    position: static;
+  }
+  .hamburger-menu-toggle {
+    display: none;
+  }
+  
+  .nav-list {
+    position:static;
+    transform: none;
+    display: flex;
+    width: auto;
+    max-height: none;
+  }
+
+  .nav-list ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+}

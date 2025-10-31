@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Metamorphous&display=swap" rel="stylesheet">
+  <title>Catventures - Cat Spells</title>
+  <link rel="stylesheet" href="./index.css">
+  <!-- don't forget to add fav icon!!!!! -->
+</head>
+
+<body>
+  <header>
+    <div class="header-logo">
+      <a href="/" aria-label="Go to homepage">
+        <img src="./images/catventures-cropped.PNG" alt="Catventures logo">
+      </a>
+    </div>
+    <button 
+      id="hamburger-btn" 
+      class="hamburger-menu-toggle" 
+      aria-label="Toggle Menu"
+      aria-expanded="false"
+      aria-controls="nav-links">
+      <img src="./images/hamburger-menu.svg" alt="hamburger menu icon">
+    </button>
+  </header>
+
+  <nav class="nav-list" id="nav-list">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="./index.html">Character Generator</a></li>
+      <li><a href="./spells.html" aria-current="page">Spells</a></li>
+    </ul>
+  </nav>
+
+
+  <main class="container">
+    <h1 class="styled-font">SPELLS</h1>
+
+    <div class="two-col">
+      <div class="left-col col">
+        <h2 class="medieval-font center">LIST OF SPELLS</h2>
+        <p>name: "Purr of Tranquility"</p>
+      </div>
+
+      <div class="right-col col">
+        <h2 class="medieval-font center">SPELL DESCRIPTION</h2>
+        <h3><span class="bold">Name:</span> "Purr of Tranquility"</h3>
+        <p><span class="bold">Level:</span> 1</p>
+        <p><span class="bold">School:</span> Enchantment</p>
+        <p><span class="bold">CastingTime:</span> 1 action</p>
+        <p><span class="bold">Range:</span> 30 feet</p>
+        <p><span class="bold">Duration:</span> Concentration, up to 1 minute</p>
+        <p><span class="bold">Components:</span> V, S</p>
+        <p><span class="bold">Description:</span> You emit a soothing purr that calms hostile creatures.</p>
+        <p><span class="bold">Effect:</span> Each creature of your choice within range must succeed on a Wisdom saving throw or be charmed until the spell ends.</p>
+<p>
+      </div>
+    </div>
+
+  
+  </main>
+
+
+
+  <footer>
+
+  </footer>
+
+<script type="module" src="./spells.js"></script>
+</body>
+</html>

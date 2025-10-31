@@ -1,4 +1,4 @@
-import {characterData} from "./charData.js"
+import {characterData} from "./data/charData.js"
 
 const createBtn = document.getElementById('create-btn')
 const charAncestry = document.getElementById('char-ancestry')
