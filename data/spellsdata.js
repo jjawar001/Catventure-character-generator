@@ -1,5 +1,6 @@
 export const catSpells = [
   {
+    id: "b0b25a39-7e7b-4b08-a57e-5e07a1d1b001",
     name: "Purr of Tranquility",
     level: 1,
     school: "Enchantment",
@@ -11,6 +12,7 @@ export const catSpells = [
     effect: "Each creature of your choice within range must succeed on a Wisdom saving throw or be charmed until the spell ends."
   },
   {
+    id: "c13e064b-1c9a-47aa-b97c-90f6c9e75a34",
     name: "Nine Lives",
     level: 4,
     school: "Abjuration",
@@ -22,6 +24,7 @@ export const catSpells = [
     effect: "When you would be reduced to 0 HP, you drop to 1 HP instead. This effect can occur up to 9 times during the spell's duration."
   },
   {
+    id: "8c8a879d-77e3-4f21-a612-1e5a52a9965b",
     name: "Catnap",
     level: 3,
     school: "Enchantment",
@@ -33,6 +36,7 @@ export const catSpells = [
     effect: "Up to three willing creatures fall asleep for 10 minutes. When the spell ends, they gain the benefits of a short rest."
   },
   {
+    id: "4d1e5a63-2871-46c1-88f7-4e279eea0c90",
     name: "Whisker Sense",
     level: 2,
     school: "Divination",
@@ -44,6 +48,7 @@ export const catSpells = [
     effect: "You gain advantage on Perception checks relying on hearing or touch and can sense invisible creatures within 10 feet."
   },
   {
+    id: "9a7e268b-b94d-45ef-b76b-7d43da8dc5e1",
     name: "Feline Agility",
     level: 1,
     school: "Transmutation",
@@ -55,6 +60,7 @@ export const catSpells = [
     effect: "Your movement speed doubles, and you can move through the space of creatures one size larger without penalty."
   },
   {
+    id: "f91db19a-f5cb-48f8-b452-1ef95f2f5b52",
     name: "Call of the Alley",
     level: 5,
     school: "Conjuration",
@@ -66,6 +72,7 @@ export const catSpells = [
     effect: "You summon 1d4 + 1 spectral cats that act as familiars under your control. They can attack, distract, or scout for you."
   },
   {
+    id: "e4b19449-9c07-4f0d-9d5d-10c0a9f4579f",
     name: "Shadow Pounce",
     level: 3,
     school: "Illusion",
@@ -77,6 +84,7 @@ export const catSpells = [
     effect: "You teleport up to 30 feet to an unoccupied space in dim light or darkness and make one melee attack with advantage."
   },
   {
+    id: "7df24e9e-267f-4c48-96e9-22b1a7c4c0e9",
     name: "Hairball Burst",
     level: 2,
     school: "Evocation",
@@ -88,6 +96,7 @@ export const catSpells = [
     effect: "Creatures in the area must make a Dexterity saving throw or take 2d8 force damage and be blinded until the start of your next turn."
   },
   {
+    id: "3fba0219-4f13-4ad6-8a42-6820f0fc1c57",
     name: "Pawstep Silence",
     level: 2,
     school: "Illusion",
@@ -99,6 +108,7 @@ export const catSpells = [
     effect: "You and any items you carry make no noise. You gain advantage on Dexterity (Stealth) checks and cannot trigger noise-based traps."
   },
   {
+    id: "05d6d661-c264-4b2b-83cb-faf0d558a37c",
     name: "Gleaming Eyes",
     level: 1,
     school: "Transmutation",
@@ -110,6 +120,7 @@ export const catSpells = [
     effect: "You gain darkvision out to 120 feet, or your darkvision range doubles if you already have it."
   },
   {
+    id: "97cfed7d-8c2e-48a9-9915-41ee5a8f6f32",
     name: "Curiosity’s Blessing",
     level: 3,
     school: "Divination",
@@ -121,6 +132,7 @@ export const catSpells = [
     effect: "You can ask three yes/no questions about your surroundings or an item within 30 feet, as if under the effect of *augury*."
   },
   {
+    id: "ba5e69d9-fba9-4efb-83b4-cbe1a5f01fbb",
     name: "Scratching Claws",
     level: 0,
     school: "Evocation",
@@ -132,6 +144,7 @@ export const catSpells = [
     effect: "Make a melee spell attack. On hit, deal 1d6 slashing damage. The claws shimmer like moonlight and vanish after the strike."
   },
   {
+    id: "de2b9dc2-71a3-4b84-bb24-15fcdbda9f3a",
     name: "Tail Whip",
     level: 1,
     school: "Transmutation",
@@ -143,6 +156,7 @@ export const catSpells = [
     effect: "Make a melee spell attack; on hit, deal 1d8 bludgeoning damage and push the target 5 feet away."
   },
   {
+    id: "a14d21c9-1460-4f53-8f43-7ec9a3df1c66",
     name: "Litterfall",
     level: 4,
     school: "Conjuration",
@@ -154,6 +168,7 @@ export const catSpells = [
     effect: "Creatures in the area must make a Constitution save or be blinded and have their speed halved for the duration."
   },
   {
+    id: "88de4a41-b68c-46a4-810f-4b59a57a19d4",
     name: "King of Cats",
     level: 6,
     school: "Transmutation",
