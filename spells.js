@@ -18,8 +18,10 @@ hamburgerBtn.addEventListener('click', ()=>{
 
 
 const tableBody = document.getElementById('table-body');
-const spellListTable = document.getElementById('spell-list-table');
+// const spellListTable = document.getElementById('spell-list-table');
 const spellDescription = document.getElementById('spell-description');
+let ascending = true;
+let chosenTh = 0;
 
 
 function renderSpellTable(spellData) {
@@ -32,13 +34,32 @@ function renderSpellTable(spellData) {
                 <td>${spell.components}</td>
               </tr>`
   })
-
   tableBody.insertAdjacentHTML('beforeEnd', newHTML)
+  sortTable(0) 
 }
+
+function sortTable(categoryIndex) {
+  const rowsNode = tableBody.querySelectorAll('tr')
+  const rows = [...rowsNode]
+
+  rows.sort((rowA, rowB) => {
+    let cellA = rowA.cells[categoryIndex].textContent 
+    let cellB = rowB.cells[categoryIndex].textContent 
+    return ascending ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA)
+    // return cellB.localeCompare(cellA)
+  })
+
+  rows.forEach((row)=>{
+    tableBody.appendChild(row)
+  })
+}
+
 
 renderSpellTable(catSpells)
 
-spellListTable.addEventListener('click', function(e) {
+
+// CHOOSE WHICH SPELL TO DISPLAY BY CLICKING ON SPELL IN TABLE
+tableBody.addEventListener('click', function(e) {
   const row = e.target.closest('tr')
   if (row) {
     catSpells.forEach((spell) => {
@@ -54,9 +75,60 @@ spellListTable.addEventListener('click', function(e) {
             <p><span class="bold">Duration:</span> ${spell.duration}</p>
             <p><span class="bold">Components:</span> ${spell.components}</p>
             <p><span class="bold">Description:</span> ${spell.description}</p>
-            <p><span class="bold">Effect:</span>${spell.effect}</p>`
+            <p><span class="bold">Effect:</span> ${spell.effect}</p>`
         spellDescription.insertAdjacentHTML('beforeEnd', spellDescriptionText)
       }
     })
   }
 })
+
+// DETERMINE WHICH TH CATEGORY WAS CLICKED AND CALL SORTTABLE
+document.querySelector('thead').addEventListener('click', (e) => {
+      if(e.target.tagName ===  'TH') {
+        removeThColor()
+        ascending = !ascending
+
+        switch (e.target.id){
+          case 'col-name':
+            ascending = (chosenTh===0) ? false : true;
+            chosenTh = 0
+            sortTable(0)
+            e.target.classList.add('highlight')
+            break
+
+          case 'col-level':
+            ascending = (chosenTh===1) ? false : true;
+            chosenTh = 1
+            sortTable(1)
+            e.target.classList.add('highlight')
+            break
+
+          case 'col-school':
+            ascending = (chosenTh===2) ? false : true;
+            chosenTh = 2
+            sortTable(2)
+            e.target.classList.add('highlight')
+            break
+
+          case 'col-components':
+            ascending = (chosenTh===3) ? false : true;
+            chosenTh = 3
+            sortTable(3)
+            e.target.classList.add('highlight')
+            break
+
+          default:
+            ascending = (chosenTh===0) ? false : true;
+            chosenTh = 0
+            sortTable(0)
+            e.target.classList.add('highlight')
+        }   
+      }
+})
+
+// REMOVE HIGHLIGHT FROM ALL TH'S
+function removeThColor(){
+  const th = document.querySelectorAll('th')
+  th.forEach(cell => cell.classList.remove('highlight'))
+}
+

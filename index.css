@@ -324,6 +324,10 @@ tr:active {
   color: red;
   cursor: pointer;
 }
+.highlight {
+  /* background-color: red; */
+  opacity: 0.5;
+}
 
 
 
