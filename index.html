@@ -11,24 +11,22 @@
   <!-- don't forget to add fav icon!!!!! -->
 </head>
 
-
-
-
 <body>
   <header>
-    <div class="header-logo">
-      <a href="/" aria-label="Go to homepage">
-        <img src="./images/catventures-cropped.PNG" alt="Catventures logo">
-      </a>
-    </div>
-    <button 
-      id="hamburger-btn" 
-      class="hamburger-menu-toggle" 
-      aria-label="Toggle Menu"
-      aria-expanded="false"
-      aria-controls="nav-links">
-      <img src="./images/hamburger-menu.svg" alt="hamburger menu icon">
-    </button>
+      <div class="header-logo">
+        <a href="./index.html" aria-label="Go to homepage">
+          <img src="./images/catventures-cropped3.jpg" alt="Catventures logo">
+        </a>
+      </div>
+
+      <button 
+        id="hamburger-btn" 
+        class="hamburger-menu-toggle" 
+        aria-label="Toggle Menu"
+        aria-expanded="false"
+        aria-controls="nav-links">
+        <img src="./images/hamburger-menu.svg" alt="hamburger menu icon">
+      </button>
   </header>
 
   <nav class="nav-list" id="nav-list">
@@ -40,11 +38,10 @@
     </ul>
   </nav>
 
-
-  <main class="container">
+  <main class="inner-container">
     <section aria-labelledby="intro-title">
-      <h1 class="medieval-font">Become the cat-venturer <br>you were born to be!</h1>
-      <p class="styled-font">Click the button below to summon a brand new adventurer! Each roll reveals a random combination of ancestry, class, and background.</p>
+      <h1 class="styled-font">Become the cat-venturer <br>you were born to be!</h1>
+      <p>Click the button below to summon a brand new adventurer! Each roll reveals a random combination of ancestry, class, and background.</p>
     </section>
     <div class="btn-area">
       <button class="bold" id="create-btn" type="submit" aria-label="Generate a random cat-based D&D character">
@@ -71,20 +68,28 @@
 
   <footer>
     <section>
-      <p class="styled-font">STAY CONNECTED</p>
+      <p class="footer__stay-connected styled-font center">STAY CONNECTED</p>
+      <div class="footer__social-icons">
+        <a href="https://discord.com/"><img src="./images/discord.png" alt=""></a>
+        <a href="https://facebook.com/"><img src="./images/facebook.png" alt=""></a>
+        <a href="https://instagram.com"><img src="./images/instagram.png" alt=""></a>
+        <a href="https://x.com"><img src="./images/x.png" alt=""></a>
+      </div>
     </section>
-    <section class="logo-footer">
-      <img src="./images/catventures-just-logo.PNG" alt="">
+
+    <section class="footer__logo">
+      <img src="./images/catventures-just-logo.PNG" alt="catventures logo">
     </section>
-    <div class="footer-nav outline">
+
+    <nav class="footer__nav center">
       <p class="styled-font">NAVIGATE</p>
-      <ul class="indent">
+      <ul class="center">
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="./index.html">Character Generator</a></li>
         <li><a href="./spells.html">Spells</a></li>
       </ul>
-    </div>
+    </nav>
   </footer>
 
 <script type="module" src="./index.js"></script>

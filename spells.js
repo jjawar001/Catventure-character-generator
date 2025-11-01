@@ -54,7 +54,7 @@ spellListTable.addEventListener('click', function(e) {
             <p><span class="bold">Duration:</span> ${spell.duration}</p>
             <p><span class="bold">Components:</span> ${spell.components}</p>
             <p><span class="bold">Description:</span> ${spell.description}</p>
-            <p><span class="bold">Effect:</span>${spell.effect}.</p>`
+            <p><span class="bold">Effect:</span>${spell.effect}</p>`
         spellDescription.insertAdjacentHTML('beforeEnd', spellDescriptionText)
       }
     })

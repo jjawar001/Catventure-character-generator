@@ -38,20 +38,28 @@
   </nav>
 
 
-  <main class="container">
+  <main class="inner-container">
     <h1 class="styled-font">SPELLS</h1>
     <section>
       <div class="two-col">
         <div class="left-col col">
           <h2 class="medieval-font center">LIST OF SPELLS</h2>
-          <div class="table">
-            <table id="spell-list-table"><thead>
-              <tr id="testing">
-                <th>Name</th>
-                <th>Level</th>
-                <th>School</th>
-                <th>Components</th>
-              </tr></thead>
+          <div class="table-wrapper">
+            <table id="spell-list-table">
+              <colgroup>
+                <col style="width: 35%; margin: 2em;">
+                <col style="width: auto;">
+                <col style="width: 25%;">
+                <col style="width: 25%;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th id="col-name">Name</th>
+                  <th id="col-level">Level</th>
+                  <th id="col-school">School</th>
+                  <th id="col-components">Components</th>
+                </tr>
+              </thead>
             <tbody id="table-body">
 <!--                <tr>
                 <td>Purr of Tranquility</td>
@@ -65,7 +73,7 @@
         </div>
 
         <div class="right-col col" id="spell-description">
-<!--           <h2 class="medieval-font center">SPELL DESCRIPTION</h2>
+          <h2 class="medieval-font center">SPELL DESCRIPTION</h2>
           <h3 class="bold center">Purr of Tranquility</h3>
           <p><span class="bold">Level:</span> 1</p>
           <p><span class="bold">School:</span> Enchantment</p>
@@ -74,7 +82,7 @@
           <p><span class="bold">Duration:</span> Concentration, up to 1 minute</p>
           <p><span class="bold">Components:</span> V, S</p>
           <p><span class="bold">Description:</span> You emit a soothing purr that calms hostile creatures.</p>
-          <p><span class="bold">Effect:</span> Each creature of your choice within range must succeed on a Wisdom saving throw or be charmed until the spell ends.</p> -->
+          <p><span class="bold">Effect:</span> Each creature of your choice within range must succeed on a Wisdom saving throw or be charmed until the spell ends.</p>
         </div>
       </div>
     </section>  
@@ -83,7 +91,29 @@
 
 
   <footer>
-
+    <div class="container">
+      <section>
+        <p class="footer__stay-connected styled-font center">STAY CONNECTED</p>
+        <div class="footer__social-icons">
+          <a href="https://discord.com/"><img src="./images/discord.png" alt=""></a>
+          <a href="https://facebook.com/"><img src="./images/facebook.png" alt=""></a>
+          <a href="https://instagram.com"><img src="./images/instagram.png" alt=""></a>
+          <a href="https://x.com"><img src="./images/x.png" alt=""></a>
+        </div>
+      </section>
+      <section class="footer__logo">
+        <img src="./images/catventures-just-logo.PNG" alt="catventures logo">
+      </section>
+      <nav class="footer__nav center">
+        <p class="styled-font">NAVIGATE</p>
+        <ul class="center">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="./index.html">Character Generator</a></li>
+          <li><a href="./spells.html">Spells</a></li>
+        </ul>
+      </nav>
+    </div>
   </footer>
 
 <script type="module" src="./spells.js"></script>
