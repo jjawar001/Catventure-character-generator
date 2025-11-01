@@ -4,11 +4,11 @@ const hamburgerBtn = document.getElementById('hamburger-btn')
 const navList = document.getElementById('nav-list')
 
 hamburgerBtn.addEventListener('click', ()=>{
-  // button.setAttribute('aria-expanded', isOpen);
-  // button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-  // const expanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
-  // hamburgerBtn.setAttribute('aria-expanded', String(!expanded));
-  navList.classList.toggle('active');
+  // button.setAttribute('aria-expanded', isOpen)
+  // button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu')
+  // const expanded = hamburgerBtn.getAttribute('aria-expanded') === 'true'
+  // hamburgerBtn.setAttribute('aria-expanded', String(!expanded))
+  navList.classList.toggle('active')
   if (navList.classList.contains('active')){
     hamburgerBtn.innerHTML = `<img class="close-nav-list" src="./images/close-img.png" alt="hamburger menu icon">`
   } else {
@@ -18,19 +18,53 @@ hamburgerBtn.addEventListener('click', ()=>{
 
 
 const tableBody = document.getElementById('table-body');
-// const spellListTable = document.getElementById('spell-list-table');
-const spellDescription = document.getElementById('spell-description');
+// const spellListTable = document.getElementById('spell-list-table')
+const spellDescription = document.getElementById('spell-description')
 let ascending = true;
 let chosenTh = 0;
 
 
 function renderSpellTable(spellData) {
   let newHTML = ''
+  let spellSchoolAbbrev = ''
   spellData.forEach(spell => {
-      newHTML += `<tr id="${spell.id}">
+    switch (spell.school) {
+      case "Abjuration":
+        spellSchoolAbbrev = 'Abju.'
+        break
+      
+      case "Conjuration":
+        spellSchoolAbbrev = 'Conj.'
+        break
+      
+      case "Divination":
+        spellSchoolAbbrev = 'Divi.'
+        break
+      
+      case "Enchantment":
+        spellSchoolAbbrev = 'Ench.'
+        break
+      
+      case "Evocation":
+        spellSchoolAbbrev = 'Evoc.'
+        break
+      
+      case "Illusion":
+        spellSchoolAbbrev = 'Illu.'
+        break
+      
+      case "Necromancy":
+        spellSchoolAbbrev = 'Necr.'
+        break
+      
+      case "Transmutation":
+        spellSchoolAbbrev = 'Tran.'
+        break      
+    }
+    newHTML += `<tr id="${spell.id}">
                 <td>${spell.name}</td>
                 <td>${spell.level}</td>
-                <td>${spell.school}</td>
+                <td>${spellSchoolAbbrev}</td>
                 <td>${spell.components}</td>
               </tr>`
   })
@@ -40,16 +74,16 @@ function renderSpellTable(spellData) {
 
 function sortTable(categoryIndex) {
   const rowsNode = tableBody.querySelectorAll('tr')
-  const rows = [...rowsNode]
+  const rowsArray = [...rowsNode]
 
-  rows.sort((rowA, rowB) => {
+  rowsArray.sort((rowA, rowB) => {
     let cellA = rowA.cells[categoryIndex].textContent 
     let cellB = rowB.cells[categoryIndex].textContent 
     return ascending ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA)
     // return cellB.localeCompare(cellA)
   })
 
-  rows.forEach((row)=>{
+  rowsArray.forEach((row)=>{
     tableBody.appendChild(row)
   })
 }
@@ -66,8 +100,8 @@ tableBody.addEventListener('click', function(e) {
       if (row.id === spell.id) {
         spellDescription.innerHTML = ''
         const spellDescriptionText = `
-            <h2 class="medieval-font center">SPELL DESCRIPTION</h2>
-            <h3 class="bold center">${spell.name}</h3>
+            <h2 class="center">SPELL DESCRIPTION</h2>
+            <h3 class="styled-font bold center">${spell.name}</h3>
             <p><span class="bold">Level:</span> ${spell.level}</p>
             <p><span class="bold">School:</span> ${spell.school}</p>
             <p><span class="bold">Casting Time:</span> ${spell.castingTime}</p>
@@ -85,40 +119,44 @@ tableBody.addEventListener('click', function(e) {
 // DETERMINE WHICH TH CATEGORY WAS CLICKED AND CALL SORTTABLE
 document.querySelector('thead').addEventListener('click', (e) => {
       if(e.target.tagName ===  'TH') {
-        removeThColor()
-        ascending = !ascending
+        removeThHighlightAndTriangle()
 
         switch (e.target.id){
           case 'col-name':
-            ascending = (chosenTh===0) ? false : true;
+            ascending = (ascending===false || chosenTh !== 0) ? true : false
+            e.target.textContent = (ascending) ? "Name ▼" : "Name ▲"
             chosenTh = 0
             sortTable(0)
             e.target.classList.add('highlight')
             break
 
           case 'col-level':
-            ascending = (chosenTh===1) ? false : true;
+            ascending = (ascending===false || chosenTh !== 1) ? true : false
+            e.target.textContent = (ascending) ? "Level ▼" : "Level ▲"
             chosenTh = 1
             sortTable(1)
             e.target.classList.add('highlight')
             break
 
           case 'col-school':
-            ascending = (chosenTh===2) ? false : true;
+            ascending = (ascending===false || chosenTh !== 2) ? true : false
+            e.target.textContent = (ascending) ? "School ▼" : "School ▲"
             chosenTh = 2
             sortTable(2)
             e.target.classList.add('highlight')
             break
 
           case 'col-components':
-            ascending = (chosenTh===3) ? false : true;
+            ascending = (ascending===false || chosenTh !== 3) ? true : false
+            e.target.textContent = (ascending) ? "Components ▼" : "Components ▲"
             chosenTh = 3
             sortTable(3)
             e.target.classList.add('highlight')
             break
 
           default:
-            ascending = (chosenTh===0) ? false : true;
+            ascending = (ascending===false || chosenTh !== 4) ? true : false
+            e.target.textContent = (ascending) ? "Name ▼" : "Name ▲"
             chosenTh = 0
             sortTable(0)
             e.target.classList.add('highlight')
@@ -126,9 +164,11 @@ document.querySelector('thead').addEventListener('click', (e) => {
       }
 })
 
-// REMOVE HIGHLIGHT FROM ALL TH'S
-function removeThColor(){
+// REMOVE HIGHLIGHT and remove trianges FROM ALL TH'S
+function removeThHighlightAndTriangle(){
   const th = document.querySelectorAll('th')
   th.forEach(cell => cell.classList.remove('highlight'))
+  th.forEach(cell => cell.textContent = cell.textContent.replace('▼', ''))
+  th.forEach(cell => cell.textContent = cell.textContent.replace('▲', ''))  
 }
 

@@ -280,9 +280,14 @@ footer .container {
   width: 100%;
 }
 
+.left-col {
+  margin-bottom: 2em;
+}
+
 .table-wrapper {
   height: 300px;
   overflow-y: auto;
+  overflow-x: auto;
   border: 2px solid var(--color-goldenrod);
 
 }
@@ -290,14 +295,15 @@ table {
   width: 100%;
   border-collapse: collapse; 
   table-layout: fixed;
-
+  font-size: 0.75rem;
 }
 
 thead th {
   position: sticky;
+  height: 3em;
   top: 0;
-  background-color: var(--color-parchment); /* match your design */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  background-color: var(--color-parchment);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
   z-index: 2;
 }
 
@@ -320,13 +326,14 @@ tr {
 }
 tr:hover, 
 tr:active {
-  opacity: 0.5;
+  /* opacity: 0.5; */
   color: red;
   cursor: pointer;
 }
 .highlight {
-  /* background-color: red; */
-  opacity: 0.5;
+  background-color: darkgray;
+  color: white;
+  /* opacity: 0.5; */
 }
 
 
@@ -337,7 +344,7 @@ tr:active {
 @media all and (min-width:755px) {
   .inner-container {
     width: 80%;
-    max-width: 1000px;
+    max-width: 2000px;
 
   }
   .inner-container h1 {
@@ -380,9 +387,20 @@ tr:active {
     flex-direction: row;
     justify-content: space-between;
     align-items: start;
-    width: 1000px;
-
+    width: 80%;
+    max-width: 1000px;
   }
+
+  footer .container section,
+  footer nav {
+    /* border: 1px solid red; */
+    flex: 1;
+  }
+
+  footer nav {
+    text-align: center;
+  }
+
 
 
   /* for spells page at wider screens */
@@ -392,6 +410,18 @@ tr:active {
   .table-wrapper {
     height: 500px;
     margin-right: 1em;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+
+  h3 {
+    margin-top: 0.5em;
+    font-size: 2rem;
   }
 
 }
