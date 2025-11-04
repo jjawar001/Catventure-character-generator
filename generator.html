@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Metamorphous&display=swap" rel="stylesheet">
+  <title>Catventures - Character Generator</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="generator.html">
+  <link rel="shortcut icon" href="./images/catventures-just-logo.PNG" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+      <div class="header-logo">
+        <a href="./index.html" aria-label="Go to homepage">
+          <img src="./images/catventures-cropped3.jpg" alt="Catventures logo">
+        </a>
+      </div>
+
+      <button 
+        id="hamburger-btn" 
+        class="hamburger-menu-toggle" 
+        aria-label="Toggle Menu"
+        aria-expanded="false"
+        aria-controls="nav-links">
+        <img src="./images/hamburger-menu.svg" alt="hamburger menu icon">
+      </button>
+  </header>
+
+  <nav class="nav-list" id="nav-list">
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="./generator.html" aria-current="page">Character Generator</a></li>
+      <li><a href="./spells.html">Spells</a></li>
+    </ul>
+  </nav>
+
+  <main class="inner-container">
+    <section aria-labelledby="intro-title">
+      <h1 class="styled-font">Become the cat-venturer <br>you were born to be!</h1>
+      <p>Click the button below to summon a brand new adventurer! Each roll reveals a random combination of ancestry, class, and background.</p>
+    </section>
+    <div class="btn-area">
+      <button class="bold" id="create-btn" type="submit" aria-label="Generate a random cat-based D&D character">
+        Create Character
+      </button>
+    </div>
+
+
+    <section class="character-sheet">
+      <div class="character-image" id="character-image">
+        <!-- <img src="./images/cat-ranger.jpg" alt=""> -->
+      </div>
+
+      <div class="character-details" aria-live="polite">
+        <p><span class="bold">Ancestry:</span></p>
+        <p> <span class="styled-font indent" id="char-ancestry">-</span></p>
+        <p><span class="bold">Class: </span></p>
+        <p><span class="styled-font indent" id="char-class">-</span></p>
+        <p><span class="bold">Background:</span></p>
+        <p><span class="styled-font indent" id="char-background">-</span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <section>
+        <p class="footer__stay-connected styled-font center">STAY CONNECTED</p>
+        <div class="footer__social-icons">
+          <a href="https://discord.com/"><img src="./images/discord.png" alt=""></a>
+          <a href="https://facebook.com/"><img src="./images/facebook.png" alt=""></a>
+          <a href="https://instagram.com"><img src="./images/instagram.png" alt=""></a>
+          <a href="https://x.com"><img src="./images/x.png" alt=""></a>
+        </div>
+      </section>
+      <section class="footer__logo">
+        <img src="./images/catventures-just-logo.PNG" alt="catventures logo">
+      </section>
+      <nav class="footer__nav center">
+        <p class="styled-font">NAVIGATE</p>
+        <ul class="center">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="./index.html">Character Generator</a></li>
+          <li><a href="./spells.html">Spells</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+<script type="module" src="./generator.html"></script>
+</body>
+</html>

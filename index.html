@@ -6,9 +6,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Metamorphous&display=swap" rel="stylesheet">
-  <title>Catventures - Character Generator</title>
-  <link rel="stylesheet" href="index.css">
-  <!-- don't forget to add fav icon!!!!! -->
+  <title>Catventures - Home</title>
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="shortcut icon" href="./images/catventures-just-logo.PNG" type="image/x-icon">
 </head>
 
 <body>
@@ -31,40 +32,52 @@
 
   <nav class="nav-list" id="nav-list">
     <ul>
-      <li><a href="#">Home</a></li>
+      <li><a href="./index.html" aria-current="page">Home</a></li>
       <li><a href="#">About</a></li>
-      <li><a href="./index.html" aria-current="page">Character Generator</a></li>
+      <li><a href="./generator.html">Character Generator</a></li>
       <li><a href="./spells.html">Spells</a></li>
     </ul>
   </nav>
 
-  <main class="inner-container">
-    <section aria-labelledby="intro-title">
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1 class="styled-font">Welcome to the Feline Realms</h1>
+      <p>A D&D-inspired world where cats cast spells, chase destiny, and nap in glory.</p>
+    </div>
+
+    <div class="icons-section">
+      <section class="spellbook">
+        <a href="./spells.html">
+          <h2 class="styled-font">Prepare your spellbook</h2>
+          <img src="./images/cat spellbook icon.jpg" alt="">
+        </a>
+      </section>
+      <section class="char-creator">
+        <a href="./generator.html">
+          <h2 class="styled-font">Choose your character</h2>
+          <img src="./images/cat spellbook icon2.jpg" alt="">
+        </a>
+      </section>
+    </div>
+  </div>
+
+
+  <!-- <main class="inner-container">
+
+    <section>
       <h1 class="styled-font">Become the cat-venturer <br>you were born to be!</h1>
       <p>Click the button below to summon a brand new adventurer! Each roll reveals a random combination of ancestry, class, and background.</p>
     </section>
+
+
     <div class="btn-area">
       <button class="bold" id="create-btn" type="submit" aria-label="Generate a random cat-based D&D character">
         Create Character
       </button>
+
     </div>
 
-
-    <section class="character-sheet">
-      <div class="character-image" id="character-image">
-        <!-- <img src="./images/cat-ranger.jpg" alt=""> -->
-      </div>
-
-      <div class="character-details" aria-live="polite">
-        <p><span class="bold">Ancestry:</span></p>
-        <p> <span class="styled-font indent" id="char-ancestry">-</span></p>
-        <p><span class="bold">Class: </span></p>
-        <p><span class="styled-font indent" id="char-class">-</span></p>
-        <p><span class="bold">Background:</span></p>
-        <p><span class="styled-font indent" id="char-background">-</span></p>
-      </div>
-    </section>
-  </main>
+  </main> -->
 
   <footer>
     <div class="container">
@@ -77,15 +90,15 @@
           <a href="https://x.com"><img src="./images/x.png" alt=""></a>
         </div>
       </section>
-      <section class="footer__logo">
+      <!-- <section class="footer__logo">
         <img src="./images/catventures-just-logo.PNG" alt="catventures logo">
-      </section>
+      </section> -->
       <nav class="footer__nav center">
         <p class="styled-font">NAVIGATE</p>
         <ul class="center">
-          <li><a href="#">Home</a></li>
+          <li><a href="./index.html" aria-current="page">Home</a></li>
           <li><a href="#">About</a></li>
-          <li><a href="./index.html">Character Generator</a></li>
+          <li><a href="./generator.html">Character Generator</a></li>
           <li><a href="./spells.html">Spells</a></li>
         </ul>
       </nav>
