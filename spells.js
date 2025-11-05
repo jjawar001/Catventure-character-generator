@@ -70,6 +70,29 @@ function renderSpellTable(spellData) {
   })
   tableBody.insertAdjacentHTML('beforeEnd', newHTML)
   sortTable(0) 
+  
+// Dynamically render  the first spell sorted by letter by default when page loads
+  const rowsNode = tableBody.querySelectorAll('tr')
+  const rowsArray = [...rowsNode]
+  
+  const spell = catSpells.filter(item => {
+    return item.id === rowsArray[0].id
+  })
+  console.log(spell)
+
+  spellDescription.innerHTML = ''
+  const spellDescriptionText = `
+      <h2 class="center">SPELL DESCRIPTION</h2>
+      <h3 class="styled-font bold center">${spell[0].name}</h3>
+      <p><span class="bold">Level:</span> ${spell[0].level}</p>
+      <p><span class="bold">School:</span> ${spell[0].school}</p>
+      <p><span class="bold">Casting Time:</span> ${spell[0].castingTime}</p>
+      <p><span class="bold">Range:</span> ${spell[0].range}</p>
+      <p><span class="bold">Duration:</span> ${spell[0].duration}</p>
+      <p><span class="bold">Components:</span> ${spell[0].components}</p>
+      <p><span class="bold">Description:</span> ${spell[0].description}</p>
+      <p><span class="bold">Effect:</span> ${spell[0].effect}</p>`
+  spellDescription.insertAdjacentHTML('beforeEnd', spellDescriptionText)  
 }
 
 function sortTable(categoryIndex) {

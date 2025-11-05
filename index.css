@@ -35,10 +35,6 @@ body {
 
 /* STYLING */
 
-/* [aria-current="page"] {
-  opacity: 0.5;
-  background: var(--background-html-linear-gradient);
-} */
 .styled-font {
   font-family: "Metamorphous", serif;
 }
@@ -52,31 +48,7 @@ body {
   text-align: center;
 }
 
-/* FONTS */
-.nav-list ul li a {
-  font-family: var(--font-metamorphosis);
-}
-
-
 /* typography */
-.inner-container h1 {
-  font-size: 1.25rem;
-  text-align: center;
-  margin-bottom: 0.5em;
-  text-shadow: 0 0 0.5px white;
-}
-
-p {
-  font-size: 1rem;
-  line-height: 1.5;
-  text-shadow: 0 0 1px goldenrod;
-}
-
-/* .hero-text h1, .hero-text p, .grid h2,
-h1, h2, p, a {
-  color: white;
-   text-shadow: 3px 3px 0 black;
-} */
 
 .hero-text h1 {
   font-size: 3rem;
@@ -113,25 +85,20 @@ h1, h2, p, a {
   margin: 2em auto;
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
-  gap: 2em;
-  color: white;
+  /* gap: 2em; */
 }
 
 .icons-section section a {
   text-align: center;
   text-decoration: none;
-  color: white;
 }
 
 section a img {
   border-radius: 50%;
-  /* width: 10%; */
-  max-width: 150px;
+  max-width: 100px;
   margin: 0 auto;
-  /* margin-top: 2em; */
 }
 
 
@@ -141,7 +108,8 @@ section a img {
 @media all and (min-width:755px) {
   .inner-container {
     width: 80%;
-    max-width: 2000px;
+    /* max-width: 2000px; */
+    margin-top: 5em;
 
   }
   .inner-container h1 {

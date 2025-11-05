@@ -108,12 +108,12 @@ p {
 .table-wrapper {
   height: 300px;
   overflow-y: auto;
-  overflow-x: auto;
+  overflow-x: hidden;
   border: 2px solid var(--color-goldenrod);
 
 }
 table {  
-  width: 100%;
+  max-width: 100%;
   border-collapse: collapse; 
   table-layout: fixed;
   font-size: 0.75rem;
@@ -141,10 +141,7 @@ th, td {
 td {
   padding-bottom: 1.5em;
 }
-tr {
-  height: 2em;
 
-}
 tr:hover, 
 tr:active {
   /* opacity: 0.5; */
@@ -166,63 +163,18 @@ tr:active {
   .inner-container {
     width: 70%;
     max-width: 800px;
-
   }
   .inner-container h1 {
     font-size: 2rem;
   }
-  p {
+  .inner-container h3 {
+    margin-top: 0.5em;
     font-size: 1.5rem;
+  }
+  p {
+    font-size: 1.3rem;
     line-height: 1.5;
   }
-  #create-btn {
-    font-size: 1.5rem;
-  }
-
-  header {
-    position: static;
-  }
-  .hamburger-menu-toggle {
-    display: none;
-  }
-  
-  .nav-list {
-    position:static;
-    transform: none;
-    display: flex;
-    width: auto;
-    max-height: none;
-  }
-
-  .nav-list ul {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-  }
-
-  .character-sheet {
-    flex-direction: row;
-  }
-
-  footer .container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: start;
-    width: 80%;
-    max-width: 1000px;
-  }
-
-  footer .container section,
-  footer nav {
-    /* border: 1px solid red; */
-    flex: 1;
-  }
-
-  footer nav {
-    text-align: center;
-  }
-
-
 
   /* for spells page at wider screens */
   .two-col {
@@ -237,9 +189,6 @@ tr:active {
     font-size: 0.9rem;
   }
 
-  h3 {
-    margin-top: 0.5em;
-    font-size: 2rem;
-  }
+
 
 }
