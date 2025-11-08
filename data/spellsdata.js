@@ -290,7 +290,7 @@ export const catSpells = [
   {
     id: "cfb3a98d-8330-4cf5-a05a-0e7b1d1f41d9",
     name: "Fur-midable Shield",
-    level: 4,
+    level: 1,
     school: "Abjuration",
     castingTime: "1 reaction",
     range: "Self",

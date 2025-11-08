@@ -40,11 +40,14 @@
 
 
   <main class="inner-container">
-    <h1 class="styled-font">SPELLS</h1>
+    <h1 class="styled-font">SPELLS OF THE FELINE MAGIC USER</h1>
     <section>
       <div class="two-col">
         <div class="left-col col">
           <h2 class="medieval-font center">LIST OF SPELLS</h2>
+          <!-- SEARCH BAR FOR SPELLS -->
+          <input type="text" id="myInput" placeholder="🔍 Search for spells" aria-label="Search for spells">
+          <!-- START OF TABLE WRAPPER -->
           <div class="table-wrapper">
             <table id="spell-list-table">
               <colgroup>
@@ -73,7 +76,7 @@
           </div>
         </div>
 
-        <div class="right-col col" id="spell-description">
+        <div class="right-col col" id="spell-description" aria-live="polite">
           <h2 class="center">SPELL DESCRIPTION</h2>
           <!-- <h3 class="bold center">Purr of Tranquility</h3>
           <p><span class="bold">Level:</span> 1</p>

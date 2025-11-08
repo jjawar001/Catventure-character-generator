@@ -18,3 +18,10 @@ hamburgerBtn.addEventListener('click', ()=>{
   }
 })
 
+function updateCopyrightDate() {
+  const copyrightDate = document.getElementById('copyright-date')
+  copyrightDate.textContent = new Date().getFullYear()
+}
+updateCopyrightDate()
+
+

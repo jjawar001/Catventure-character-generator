@@ -18,7 +18,7 @@ hamburgerBtn.addEventListener('click', ()=>{
 
 
 const tableBody = document.getElementById('table-body');
-// const spellListTable = document.getElementById('spell-list-table')
+const spellListTable = document.getElementById('spell-list-table')
 const spellDescription = document.getElementById('spell-description')
 let ascending = true;
 let chosenTh = 0;
@@ -78,7 +78,6 @@ function renderSpellTable(spellData) {
   const spell = catSpells.filter(item => {
     return item.id === rowsArray[0].id
   })
-  console.log(spell)
 
   spellDescription.innerHTML = ''
   const spellDescriptionText = `
@@ -195,3 +194,25 @@ function removeThHighlightAndTriangle(){
   th.forEach(cell => cell.textContent = cell.textContent.replace('▲', ''))  
 }
 
+
+
+function searchForSpells() {
+  const input = document.getElementById('myInput')
+  const filter = input.value.toUpperCase();
+  const tr = tableBody.getElementsByTagName('tr')
+  // loop through all trs and hide those that don't match the search query
+  for (let i = 0; i < tr.length; i++) {
+    console.log(tr[i].textContent)
+    if (tr) {
+      let textValue = tr[i].textContent || tr[i].innerText
+      if (textValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display="table-row"
+      } else {
+        tr[i].style.display="none"
+      }
+    }
+  }
+}
+
+  const input = document.getElementById('myInput')
+  input.addEventListener('keyup', searchForSpells)
