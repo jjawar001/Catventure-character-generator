@@ -123,6 +123,14 @@ header {
   display: block;
 }
 
+.nav-list a:hover, 
+.nav-list a:focus {
+  opacity: 0.5;
+}
+
+
+
+
 .nav-list.active {
   max-height: 300px; /*adjust based on content*/
 }

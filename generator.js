@@ -9,25 +9,24 @@ const charImage = document.getElementById('character-image')
 const hamburgerBtn = document.getElementById('hamburger-btn')
 const navList = document.getElementById('nav-list')
 
-createBtn.addEventListener('click', generateCharacter)
 
-function generateCharacter() {
-  let randomNum = randomNumber(characterData.length)
-  let generatedClass = characterData[randomNum].class
-  let generatedAncestry = characterData[randomNum].ancestry
-  let generatedBackground = characterData[randomNum].background
-  let generatedImage = characterData[randomNum].image
+const generateCharacter = () => {
+  const randomNum = randomNumber(characterData.length)
+  const generatedClass = characterData[randomNum].class
+  const generatedAncestry = characterData[randomNum].ancestry
+  const generatedBackground = characterData[randomNum].background
+  const generatedImage = characterData[randomNum].image
+
   charClass.textContent = generatedClass
   charAncestry.textContent = generatedAncestry
   charBackground.textContent = generatedBackground
+
   charImage.innerHTML = `
     <img src=${generatedImage} alt="${generatedBackground} ${generatedClass} ${generatedAncestry}">
   `
 }
 
-function randomNumber(param1){
-  return Math.floor(Math.random() * param1)
-}
+const randomNumber = (max) => Math.floor(Math.random() * max);
 
 hamburgerBtn.addEventListener('click', ()=>{
   // button.setAttribute('aria-expanded', isOpen);
@@ -41,4 +40,5 @@ hamburgerBtn.addEventListener('click', ()=>{
     hamburgerBtn.innerHTML = `<img src="./images/hamburger-menu.svg" alt="hamburger menu icon">`
   }
 })
+createBtn.addEventListener('click', generateCharacter)
 

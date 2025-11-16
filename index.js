@@ -1,10 +1,6 @@
 const hamburgerBtn = document.getElementById('hamburger-btn')
 const navList = document.getElementById('nav-list')
 
-function randomNumber(param1){
-  return Math.floor(Math.random() * param1)
-}
-
 hamburgerBtn.addEventListener('click', ()=>{
   // button.setAttribute('aria-expanded', isOpen);
   // button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
@@ -23,5 +19,3 @@ function updateCopyrightDate() {
   copyrightDate.textContent = new Date().getFullYear()
 }
 updateCopyrightDate()
-
-
